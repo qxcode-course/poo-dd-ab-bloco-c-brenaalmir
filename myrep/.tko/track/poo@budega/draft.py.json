@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-15_19-51-22",
+            "content": "@@ -1168,39 +1168,30 @@\n  if \n+len(\n self.\n-counter%5Bindex%5D is not None\n+waiting) == 0\n :%0A  \n@@ -1217,21 +1217,20 @@\n il: \n-caixa ocupado\n+sem clientes\n %22)%0A \n@@ -1258,38 +1258,47 @@\n      if \n-len(\n self.\n-waiting) == 0\n+counter%5Bindex%5D is not None\n :%0A      \n@@ -1312,36 +1312,37 @@\n rint(%22fail: \n-sem clientes\n+caixa ocupado\n %22)%0A         \n",
+            "lines": "89"
+        },
+        {
+            "label": "2025-11-15_19-54-27",
+            "content": "@@ -1447,25 +1447,24 @@\n  caixas = %22,\n- \n %22.join(%5B(%22--\n@@ -1703,17 +1703,16 @@\n era = %22,\n- \n %22.join(%5B\n",
+            "lines": "89"
+        },
+        {
+            "label": "2025-11-15_19-55-57",
+            "content": "class Person:\n    def __init__(self, name: str):\n        self.__name = name\n\n    def getName(self):\n        return self.__name\n\n    def __str__(self):\n        return self.__name\n    \nclass Market:\n    def __init__(self, counter_size: int) -> None:\n        self.counter: list[Person | None] = []\n        for _ in range(counter_size):\n            self.counter.append(None)\n        self.waiting: list[Person] = []\n\n    def arrive(self, person: Person):\n        self.waiting.append(person)\n\n    def leave(self, index: int):\n        if index < 0 or index >= len(self.counter):\n            print(\"fail: caixa inexistente\")\n            return\n        if self.counter[index] == None:\n            print(\"fail: caixa vazio\")\n            return\n        aux = self.counter[index]\n        self.counter[index] = None\n        return aux\n    \n    def give_up(self, name: str):\n        for i, person in enumerate(self.waiting):\n            if person.getName() == name:\n                del self.waiting[i]\n                return\n\n    def call(self, index: int):\n        if index < 0 or index >= len(self.counter):\n            print(\"fail: caixa inexistente\")\n            return\n        if self.counter[index] is not None:\n            print(\"fail: caixa ocupado\")\n            return\n        if len(self.waiting) == 0:\n            print(\"fail: sem clientes\")\n            return\n        self.counter[index] = self.waiting.pop(0)\n\n    def __str__(self) -> str:\n        caixas = \", \".join([(\"-----\" if x is None else str(x)) for x in self.counter])\n        #for person in self.counter:\n            #if person is None:\n                #saida += \"-----\"\n            #else:\n             #   saida += str(person) + \" \"\n        espera = \", \".join([str(x) for x in self.waiting])\n        return f\"Caixas: [{caixas}]\\nEspera: [{espera}]\"\n    \n\ndef main():\n    market = Market(0)\n    while True:\n        line = input().strip()\n        if line == \"\":\n            continue\n        print(\"$\" + line)\n        args = line.split()\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            qtd = int(args[1])\n            market = Market(qtd)\n        elif args[0] == \"show\":\n            print(market)\n        elif args[0] == \"arrive\":\n            market.arrive(Person(args[1]))\n        elif args[0] == \"call\":\n            index = int(args[1])\n            market.call(index)\n        elif args[0] == \"finish\":\n            index = int(args[1])\n            market.leave(index)\n        elif args[0] == \"giveup\":\n            market.give_up(args[1])\n        else:\n            print(\"fail: comando invalido\")\n\nmain()",
+            "lines": "89"
+        }
+    ]
+}
