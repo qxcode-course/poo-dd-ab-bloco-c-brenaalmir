@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-16_15-18-49",
+            "content": "@@ -174,2083 +174,4 @@\n    %0A\n-class Theater:%0A    def __init__(self, size: int):%0A        self.seats: list%5BClient %7C None%5D = %5B%5D%0A        for _ in range(size):%0A            self.seats.append(None)%0A%0A    def search(self, name: str):%0A        for i, cli in enumerate(self.seats):%0A            if cli is not None and cli.id == name:%0A                return i%0A        return -1%0A    %0A    def verifyIndex(self, index: int):%0A        if index %3C 0 or index %3E= len(self.seats):%0A            print(%22fail: cadeira nao%22)%0A            return True%0A        return True%0A    %0A    def reserve(self, id: str, phone: int, index: int):%0A        if not self.verifyIndex(index):%0A            return%0A        if self.seats%5Bindex%5D is not None:%0A            print(%22fail: cadeira ja esta ocupada%22)%0A        if self.search(id) != -1:%0A            print(%22fail: cliente ja esta no cinema%22)%0A        self.seats%5Bindex%5D = Cliente(id, phone)%0A%0A    def cancel(self, id: str):%0A        pos = self.earch(id)%0A        if pos == -1:%0A            print(%22fail: cliente nao esta no cinema%22)%0A            return%0A        self.seats%5Bpos%5D = None%0A%0A    def getSeats(self):%0A        return self.seats%0A    %0A    def __str__(self):%0A        saida = %22%5B%22%0A        for seat in self.seats:%0A            if seat is None:%0A                saida += %22- %22%0A            else:%0A                saida += str(seat) %0A        saida = saida.strip()%0A        saida += %22%5D%22%0A        return saida%0A    %0A%0Adef main():%0A    theater = Theater(1)%0A    while True:%0A        line = input().strip()%0A        if line == %22%22:%0A            continue%0A        print(%22$%22 + line)%0A        args = line.split()%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22init%22:%0A            n = int(args%5B1%5D)%0A            theater = Theater(n)%0A        elif args%5B0%5D == %22show%22:%0A            print(theater)%0A        elif args%5B0%5D == %22reserve%22: %0A            name = args%5B1%5D%0A            phone = (args%5B2%5D)%0A            index = (args%5B3%5D)%0A            theater.reserve(name, phone, index)%0A        elif args%5B0%5D == %22cancel%22:%0A            name = args%5B1%5D%0A            theater.cancel(name)%0A        else:%0A            print(%22fail: comando invalido%22)%0A%0Amain()\n",
+            "lines": "8"
+        },
+        {
+            "label": "2025-11-16_15-51-00",
+            "content": "@@ -2002,19 +2002,16 @@\n phone = \n-int\n (args%5B2%5D\n@@ -2032,19 +2032,16 @@\n index = \n-int\n (args%5B3%5D\n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-11-16_15-51-15",
+            "content": "@@ -1015,16 +1015,17 @@\n = Client\n+e\n (id, pho\n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-11-16_15-51-34",
+            "content": "@@ -660,12 +660,11 @@\n urn \n-Fals\n+Tru\n e%0A  \n@@ -1091,13 +1091,8 @@\n (id)\n- + %22%22\n %0A   \n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-11-16_15-52-17",
+            "content": "@@ -895,35 +895,16 @@\n upada%22)%0A\n-            return%0A\n         \n@@ -925,24 +925,24 @@\n (id) != -1:%0A\n+\n             \n@@ -982,35 +982,16 @@\n inema%22)%0A\n-            return%0A\n         \n@@ -1075,25 +1075,24 @@\n  pos = self.\n-s\n earch(id)%0A  \n@@ -1088,16 +1088,21 @@\n arch(id)\n+ + %22%22\n %0A       \n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-11-16_15-52-59",
+            "content": "@@ -1501,13 +1501,8 @@\n at) \n-+ %22 %22\n %0A   \n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-16_15-53-27",
+            "content": "@@ -1615,17 +1615,17 @@\n Theater(\n-0\n+1\n )%0A    wh\n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-16_15-54-00",
+            "content": "@@ -638,15 +638,8 @@\n  nao\n- existe\n %22)%0A \n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-16_15-55-04",
+            "content": "class Client:\n    def __init__(self, id: str, phone: int):\n        self.id = id\n        self.phone = phone\n\n    def __str__(self):\n        return f\"{self.id}:{self.phone}\"\n    \nclass Theater:\n    def __init__(self, size: int):\n        self.seats: list[Client | None] = []\n        for _ in range(size):\n            self.seats.append(None)\n\n    def search(self, name: str):\n        for i, cli in enumerate(self.seats):\n            if cli is not None and cli.id == name:\n                return i\n        return -1\n    \n    def verifyIndex(self, index: int):\n        if index < 0 or index >= len(self.seats):\n            print(\"fail: cadeira nao existe\")\n            return False\n        return True\n    \n    def reserve(self, id: str, phone: int, index: int):\n        if not self.verifyIndex(index):\n            return\n        if self.seats[index] is not None:\n            print(\"fail: cadeira ja esta ocupada\")\n            return\n        if self.search(id) != -1:\n            print(\"fail: cliente ja esta no cinema\")\n            return\n        self.seats[index] = Client(id, phone)\n\n    def cancel(self, id: str):\n        pos = self.search(id)\n        if pos == -1:\n            print(\"fail: cliente nao esta no cinema\")\n            return\n        self.seats[pos] = None\n\n    def getSeats(self):\n        return self.seats\n    \n    def __str__(self):\n        saida = \"[\"\n        for seat in self.seats:\n            if seat is None:\n                saida += \"- \"\n            else:\n                saida += str(seat) + \" \"\n        saida = saida.strip()\n        saida += \"]\"\n        return saida\n    \n\ndef main():\n    theater = Theater(0)\n    while True:\n        line = input().strip()\n        if line == \"\":\n            continue\n        print(\"$\" + line)\n        args = line.split()\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            n = int(args[1])\n            theater = Theater(n)\n        elif args[0] == \"show\":\n            print(theater)\n        elif args[0] == \"reserve\": \n            name = args[1]\n            phone = int(args[2])\n            index = int(args[3])\n            theater.reserve(name, phone, index)\n        elif args[0] == \"cancel\":\n            name = args[1]\n            theater.cancel(name)\n        else:\n            print(\"fail: comando invalido\")\n\nmain()",
+            "lines": "86"
+        }
+    ]
+}

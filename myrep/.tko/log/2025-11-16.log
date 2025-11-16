@@ -10,3 +10,15 @@
 2025-11-16 15:03:01, SELF, v:1, k:poo@lapiseira, rate:100, iagen:_, alone:7, study:120
 2025-11-16 15:03:14, MOVE, v:1, k:poo@cinema, mode:PICK
 2025-11-16 15:04:59, MOVE, v:1, k:poo@cinema, mode:BACK
+2025-11-16 15:11:48, MOVE, v:1, k:poo@cinema, mode:PICK
+2025-11-16 15:18:49, EXEC, v:1, k:poo@cinema, mode:FULL, rate:0, size:8
+2025-11-16 15:51:00, EXEC, v:1, k:poo@cinema, mode:FULL, rate:0, size:84
+2025-11-16 15:51:15, EXEC, v:1, k:poo@cinema, mode:FULL, rate:0, size:84
+2025-11-16 15:51:34, EXEC, v:1, k:poo@cinema, mode:FULL, rate:0, size:84
+2025-11-16 15:52:17, EXEC, v:1, k:poo@cinema, mode:FULL, rate:0, size:84
+2025-11-16 15:52:59, EXEC, v:1, k:poo@cinema, mode:FULL, rate:0, size:86
+2025-11-16 15:53:27, EXEC, v:1, k:poo@cinema, mode:FULL, rate:33, size:86
+2025-11-16 15:54:00, EXEC, v:1, k:poo@cinema, mode:FULL, rate:66, size:86
+2025-11-16 15:55:04, EXEC, v:1, k:poo@cinema, mode:FULL, rate:100, size:86
+2025-11-16 15:55:19, MOVE, v:1, k:poo@cinema, mode:BACK
+2025-11-16 15:55:48, SELF, v:1, k:poo@cinema, rate:100, human:_, iagen:_, alone:8, study:120
