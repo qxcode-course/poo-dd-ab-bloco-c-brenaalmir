@@ -15,3 +15,5 @@
 2025-11-15 19:55:57, EXEC, v:1, k:poo@budega, mode:FULL, rate:100, size:89
 2025-11-15 19:56:06, MOVE, v:1, k:poo@budega, mode:BACK
 2025-11-15 19:57:09, SELF, v:1, k:poo@budega, rate:100, human:_, guide:_, alone:8, study:60
+2025-11-15 20:00:18, MOVE, v:1, k:poo@lapiseira, mode:PICK
+2025-11-15 20:31:00, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:0, size:54
