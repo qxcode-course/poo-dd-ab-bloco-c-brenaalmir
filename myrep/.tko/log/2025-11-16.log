@@ -22,3 +22,4 @@
 2025-11-16 15:55:04, EXEC, v:1, k:poo@cinema, mode:FULL, rate:100, size:86
 2025-11-16 15:55:19, MOVE, v:1, k:poo@cinema, mode:BACK
 2025-11-16 15:55:48, SELF, v:1, k:poo@cinema, rate:100, human:_, iagen:_, alone:8, study:120
+2025-11-16 18:38:57, MOVE, v:1, k:poo@pula-pula, mode:PICK

@@ -1,0 +1,29 @@
+2025-11-19 20:23:23, MOVE, v:1, k:poo@pula-pula, mode:PICK
+2025-11-19 20:23:26, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:0, size:79
+2025-11-19 20:24:43, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:0, size:79
+2025-11-19 20:25:27, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:20, size:79
+2025-11-19 20:27:19, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:40, size:80
+2025-11-19 20:29:24, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:50, size:80
+2025-11-19 20:33:48, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:40, size:82
+2025-11-19 20:35:00, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:40, size:82
+2025-11-19 20:35:59, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:50, size:82
+2025-11-19 20:37:01, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:50, size:82
+2025-11-19 20:48:34, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:40, size:82
+2025-11-19 20:50:09, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:50, size:82
+2025-11-19 20:52:29, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:40, size:82
+2025-11-19 20:52:40, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:50, size:82
+2025-11-19 20:54:52, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:60, size:82
+2025-11-19 20:56:09, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:81
+2025-11-19 21:01:03, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70
+2025-11-19 21:03:16, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:0, size:83
+2025-11-19 21:03:35, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:84
+2025-11-19 21:07:25, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:91
+2025-11-19 21:07:36, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:81
+2025-11-19 21:09:04, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:50, size:81
+2025-11-19 21:12:19, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:85
+2025-11-19 21:13:38, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:50, size:85
+2025-11-19 21:14:37, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:50
+2025-11-19 21:15:46, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:81
+2025-11-19 21:26:00, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:100, size:80
+2025-11-19 21:26:15, MOVE, v:1, k:poo@pula-pula, mode:BACK
+2025-11-19 21:27:01, SELF, v:1, k:poo@pula-pula, rate:100, human:_, iagen:_, alone:7, study:150
